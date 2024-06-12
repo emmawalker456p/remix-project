@@ -4,56 +4,63 @@
 <h3 align="center">Remix Project</h3>
     
 <div align="center">
-
-
-[![CircleCI](https://img.shields.io/circleci/build/github/ethereum/remix-project?logo=circleci)](https://circleci.com/gh/ethereum/remix-project)
-[![Documentation Status](https://readthedocs.org/projects/remix-ide/badge/?version=latest)](https://remix-ide.readthedocs.io/en/latest/index.html)
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat&logo=github)](https://github.com/ethereum/remix-project/blob/master/CONTRIBUTING.md)
-[![GitHub contributors](https://img.shields.io/github/contributors/ethereum/remix-project?style=flat&logo=github)](https://github.com/ethereum/remix-project/blob/master/CONTRIBUTING.md)
-[![Awesome Remix](https://img.shields.io/badge/Awesome--Remix-resources-green?logo=awesomelists)](https://github.com/ethereum/awesome-remix)
-![GitHub](https://img.shields.io/github/license/ethereum/remix-project)
-[![Discord](https://img.shields.io/badge/join-discord-brightgreen.svg?style=flat&logo=discord)](https://discord.gg/mh9hFCKkEq)
-[![Twitter Follow](https://img.shields.io/twitter/follow/ethereumremix?style=flat&logo=twitter&color=green)](https://twitter.com/ethereumremix)
-
+  <a href="https://circleci.com/gh/ethereum/remix-project">
+    <img src="https://img.shields.io/circleci/build/github/ethereum/remix-project?logo=circleci" alt="CircleCI">
+  </a>
+  <a href="https://remix-ide.readthedocs.io/en/latest/index.html">
+    <img src="https://readthedocs.org/projects/remix-ide/badge/?version=latest" alt="Documentation Status">
+  </a>
+  <a href="https://github.com/ethereum/remix-project/blob/master/CONTRIBUTING.md">
+    <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat&logo=github" alt="Contributions Welcome">
+  </a>
+  <a href="https://github.com/ethereum/remix-project/blob/master/CONTRIBUTING.md">
+    <img src="https://img.shields.io/github/contributors/ethereum/remix-project?style=flat&logo=github" alt="GitHub Contributors">
+  </a>
+  <a href="https://github.com/ethereum/awesome-remix">
+    <img src="https://img.shields.io/badge/Awesome--Remix-resources-green?logo=awesomelists" alt="Awesome Remix">
+  </a>
+  <a href="https://discord.gg/mh9hFCKkEq">
+    <img src="https://img.shields.io/badge/join-discord-brightgreen.svg?style=flat&logo=discord" alt="Discord">
+  </a>
+  <a href="https://twitter.com/ethereumremix">
+    <img src="https://img.shields.io/twitter/follow/ethereumremix?style=flat&logo=twitter&color=green" alt="Twitter Follow">
+  </a>
+  <img src="https://img.shields.io/github/license/ethereum/remix-project" alt="GitHub License">
 </div>
 
 ## Remix Project
 
-**Remix Project** is a rich toolset including Remix IDE, a comprehensive smart contract development tool. The Remix Project also includes Remix Plugin Engine and Remix Libraries which are low-level tools for wider use.  
+**Remix Project** is a comprehensive toolset that includes Remix IDE, a powerful tool for smart contract development, as well as the Remix Plugin Engine and Remix Libraries, which are versatile tools for a broader range of applications.
 
 ## Remix IDE
-**Remix IDE** is used for the entire journey of contract development by users of any knowledge level. It fosters a fast development cycle and has a rich set of plugins with intuitive GUIs. The IDE comes in 2 flavors and a VSCode extension:
+**Remix IDE** supports the entire lifecycle of smart contract development, catering to users of all skill levels. It offers a rapid development cycle and an extensive range of plugins with user-friendly GUIs. The IDE is available in two versions and as a VSCode extension:
 
-**Remix Online IDE**, see: [https://remix.ethereum.org](https://remix.ethereum.org)
+- **Remix Online IDE**: [remix.ethereum.org](https://remix.ethereum.org)  
+  :point_right: Supported browsers: Firefox v100.0.1 & Chrome v101.0.4951.64. Not supported on tablets, smartphones, or telephones.
 
-:point_right: Supported browsers: Firefox v100.0.1 & Chrome v101.0.4951.64. No support for Remix's use on tablets or smartphones or telephones.
+- **Remix Desktop IDE**: [Releases](https://github.com/ethereum/remix-desktop/releases)
 
-**Remix Desktop IDE**, see releases: [https://github.com/ethereum/remix-desktop/releases](https://github.com/ethereum/remix-desktop/releases)
+  ![Remix screenshot](https://github.com/ethereum/remix-project/raw/master/apps/remix-ide/remix-screenshot-400h.png)
 
-![Remix screenshot](https://github.com/ethereum/remix-project/raw/master/apps/remix-ide/remix-screenshot-400h.png)
+- **VSCode Extension**: [Ethereum-Remix](https://marketplace.visualstudio.com/items?itemName=RemixProject.ethereum-remix)
 
-**VSCode extension**, see: [Ethereum-Remix](https://marketplace.visualstudio.com/items?itemName=RemixProject.ethereum-remix)
-
-## Remix libraries 
-Remix libraries are essential for Remix IDE's native plugins. Read more about libraries [here](libs/README.md)
+## Remix Libraries
+Remix libraries are crucial for the native plugins of Remix IDE. Learn more about these libraries [here](libs/README.md).
 
 ## Offline Usage
 
-The `gh-pages` branch of [remix-live](https://github.com/ethereum/remix-live) always has the latest stable build of Remix. It contains a ZIP file with the entire build. Download it to use offline.
-
-Note: It contains the latest supported version of Solidity available at the time of the packaging. Other compiler versions can be used online only.
-
+The `gh-pages` branch of [remix-live](https://github.com/ethereum/remix-live) always contains the latest stable build of Remix, available as a ZIP file for offline use. Note that it includes the latest supported version of Solidity at the time of packaging; other compiler versions are only available online.
 
 ## Setup
 
-* Install **Yarn** and **Node.js**. See [Guide for NodeJs](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) and [Yarn install](https://classic.yarnpkg.com/lang/en/docs/install)<br/>
-*Supported versions:*
-```bash
-"engines": {
-    "node": "^20.0.0",
-    "npm": "^6.14.15"
-  }
-```
+1. **Install Yarn and Node.js**. See the [Node.js Guide](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) and [Yarn Install](https://classic.yarnpkg.com/lang/en/docs/install).
+   - *Supported versions:*
+   ```json
+   "engines": {
+       "node": "^20.0.0",
+       "npm": "^6.14.15"
+   }
+
 * Install [Nx CLI](https://nx.dev/using-nx/nx-cli) globally to enable running **nx executable commands**.
 ```bash
 yarn global add nx
