@@ -168,7 +168,7 @@ module.exports = {
   },
   'Should print hardhat logs #group4': function (browser: NightwatchBrowser) {
     browser
-      .addFile('printHardhatlog.sol',  { content: hardhatLog })
+      .addFile('printHardhatlog.sol', { content: hardhatLog })
       .clickLaunchIcon('solidity')
       .click('*[data-id="terminalClearConsole"]') // clear the terminal
       .waitForElementVisible('[for="autoCompile"]')
@@ -267,22 +267,22 @@ module.exports = {
           if (Array.isArray(result.value) && result.value.length > 0) {
             console.log('Found ' + result.value.length + ' transactions')
             browser
-            .click({
-              selector: '[data-id="listenNetworkCheckInput"]',
-            })
-            .click({
-              selector: '*[data-id="terminalClearConsole"]',
-            })
-            .click({
-              selector: '*[data-id="compilerContainerCompileAndRunBtn"]',
-            })
-            .pause(10000)
-            .waitForElementNotPresent({
-              locateStrategy: 'xpath',
-              selector: "//*[@class='remix_ui_terminal_log' and contains(.,'to:') and contains(.,'from:')]",
-              timeout: 120000
-            })
-            .end()
+              .click({
+                selector: '[data-id="listenNetworkCheckInput"]',
+              })
+              .click({
+                selector: '*[data-id="terminalClearConsole"]',
+              })
+              .click({
+                selector: '*[data-id="compilerContainerCompileAndRunBtn"]',
+              })
+              .pause(10000)
+              .waitForElementNotPresent({
+                locateStrategy: 'xpath',
+                selector: "//*[@class='remix_ui_terminal_log' and contains(.,'to:') and contains(.,'from:')]",
+                timeout: 120000
+              })
+              .end()
           } else {
             browser
               .assert.fail('No transaction found')
@@ -310,7 +310,7 @@ module.exports = {
       .switchEnvironment('vm-custom-fork')
       .waitForElementVisible('[data-id="vm-custom-fork-modal-footer-ok-react"]')
       .execute(() => {
-          (document.querySelector('*[data-id="vm-custom-forkModalDialogContainer-react"] input[data-id="CustomForkNodeUrl"]') as any).focus()
+        (document.querySelector('*[data-id="vm-custom-forkModalDialogContainer-react"] input[data-id="CustomForkNodeUrl"]') as any).focus()
       }, [], () => { })
       .clearValue('*[data-id="CustomForkNodeUrl"]').pause(1000).setValue('*[data-id="CustomForkNodeUrl"]', 'https://go.getblock.io/ee42d0a88f314707be11dd799b122cb9')
       .execute(() => {
@@ -372,9 +372,9 @@ module.exports = {
       .perform(function () {
         const actions = this.actions({ async: true });
         return actions
-            .keyDown(this.Keys.SHIFT)
-            .keyDown(this.Keys.ALT)
-            .sendKeys('r')
+          .keyDown(this.Keys.SHIFT)
+          .keyDown(this.Keys.ALT)
+          .sendKeys('r')
       })
       .useCss()
       .waitForElementContainsText('*[data-id="terminalJournal"]', '0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045', 120000)
@@ -399,17 +399,14 @@ module.exports = {
       .perform(function () {
         const actions = this.actions({ async: true });
         return actions
-            .keyDown(this.Keys.SHIFT)
-            .keyDown(this.Keys.ALT)
-            .sendKeys('r')
+          .keyDown(this.Keys.SHIFT)
+          .keyDown(this.Keys.ALT)
+          .sendKeys('r')
       })
       .useCss()
       .waitForElementContainsText('*[data-id="terminalJournal"]', 'test running free function', 120000)
   }
 }
-
-
-
 
 const asyncAwait = `
   var p = function () {
